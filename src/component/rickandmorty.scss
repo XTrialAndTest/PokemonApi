@@ -1,0 +1,32 @@
+.app {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  background-color: rgb(26, 26, 26);
+}
+.single-chr {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1rem;
+  .onething {
+    background-color: rgb(218, 226, 226);
+    h2 {
+      //   text-transform: uppercase;
+    }
+  }
+  .minute-details {
+    display: flex;
+    justify-content: space-between;
+    padding: 0 0.5rem;
+    gap: 1rem;
+  }
+  .minute-details-2 {
+    display: flex;
+    justify-content: space-between;
+    padding: 0 0.5rem;
+    gap: 1rem;
+
+    h4 {
+      font-size: 0.8rem;
+    }
+  }
+}

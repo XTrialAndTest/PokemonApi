@@ -4,7 +4,9 @@ import App from './App';
 import './index.css';
 import Rick from './component/RickandMorty';
 import Single from './component/single';
+
 import { createBrowserRouter, RouterProvider } from 'react-router-dom';
+
 const router = createBrowserRouter([
   {
     path: '/',

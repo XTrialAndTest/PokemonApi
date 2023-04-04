@@ -28,38 +28,39 @@ const RickAndMorty = () => {
   return (
     <>
       <div className='increment'>
-        <button onClick={decrease}>{count - 1}</button>
+        <button onClick={decrease}>Prev {count - 1}</button>
         <h4>{count}</h4>
-        <button onClick={increase}>{count + 1}</button>
-      </div>{' '}
+        <button onClick={increase}>{count + 1} Next</button>
+      </div>
       <div className='single-chr'>
         {chr.map((singleChr) => {
           return (
             <>
-              <Link to={`/${singleChr.id}`} state={singleChr}>
-                {console.log(singleChr)}
-                <div className='onething'>
-                  <h2>{singleChr.name}</h2>
-                  <img src={singleChr.image} alt='' />
-                  <div className='minute-details'>
-                    <h4>Species: {singleChr.species}</h4>
-                    <h4>Gender: {singleChr.gender}</h4>
-                    <h4>status: {singleChr.status}</h4>
-                  </div>
-                  <div className='minute-details-2'>
-                    <h4>place of origin: {singleChr.origin.name}</h4>
-                    <h4>current location: {singleChr.location.name}</h4>
-                  </div>
-                </div>{' '}
-              </Link>
+              {console.log(singleChr)}
+              <div className='onething' key={singleChr.id}>
+                <h2>{singleChr.name}</h2>
+                <img src={singleChr.image} alt='' />
+                <div className='minute-details'>
+                  <h4>Species: {singleChr.species}</h4>
+                  <h4>Gender: {singleChr.gender}</h4>
+                  <h4>status: {singleChr.status}</h4>
+                </div>
+                <div className='minute-details-2'>
+                  <h4>place of origin: {singleChr.origin.name}</h4>
+                  <h4>current location: {singleChr.location.name}</h4>
+                </div>
+                <Link to={`/${singleChr.id}`} state={singleChr}>
+                  click here
+                </Link>
+              </div>
             </>
           );
         })}
       </div>
       <div className='increment'>
-        <button onClick={decrease}>{count - 1}</button>
+        <button onClick={decrease}>Prev {count - 1} </button>
         <h4>{count}</h4>
-        <button onClick={increase}>{count + 1}</button>
+        <button onClick={increase}> {count + 1} Next</button>
       </div>
     </>
   );
